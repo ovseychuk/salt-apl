@@ -2,7 +2,7 @@ salt-minion:
     pkgrepo.managed:
       - name: salt-latest
       - humanname: SaltStack Latest Release Channel for Ubuntu $releasever
-      - baseurl: https://repo.saltproject.io/salt/py3/ubuntu/22.04/amd64/latest
+      - baseurl: https://repo.saltproject.io/salt/py3/ubuntu/22.04/amd64/latest jammy main
       - gpgkey: https://repo.saltproject.io/salt/py3/ubuntu/22.04/amd64/latest/salt-archive-keyring.gpg
       - gpgcheck: 1
       - enabled: 1
