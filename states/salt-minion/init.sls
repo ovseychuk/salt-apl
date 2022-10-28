@@ -1,16 +1,15 @@
 salt-minion:
-    salt-repo:
-      pkgrepo.managed:
-        - humanname: SaltStack Latest Release Channel for Ubuntu $releasever
-        - name: deb https://repo.saltproject.io/salt/py3/ubuntu/22.04/amd64/latest jammy main
-        - file: /etc/apt/sources.list.d/salt.list
-        - key_url: https://repo.saltproject.io/salt/py3/ubuntu/22.04/amd64/latest/salt-archive-keyring.gpg
-        - gpgcheck: 1
-        - enabled: 1
+    pkgrepo.managed:
+      - humanname: SaltStack Latest Release Channel for Ubuntu $releasever
+      - name: deb https://repo.saltproject.io/salt/py3/ubuntu/22.04/amd64/latest jammy main
+      - file: /etc/apt/sources.list.d/salt.list
+      - key_url: https://repo.saltproject.io/salt/py3/ubuntu/22.04/amd64/latest/salt-archive-keyring.gpg
+      - gpgcheck: 1
+      - enabled: 1
+      - require_in:
+        - pkg: salt-minion
     pkg:
       - installed
-      - require:
-        - pkgrepo: salt-repo
     service:
       - running
       - enable: True
