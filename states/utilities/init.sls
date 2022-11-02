@@ -1,3 +1,9 @@
+nala:
+  pkg:
+    - installed
+    - refresh: True
+    - allow_updates: True
+    - hold: False
 ncdu:
   pkg:
     - installed
