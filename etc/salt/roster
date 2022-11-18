@@ -3,13 +3,18 @@ bemon:
   user: root
   priv: /root/.ssh/id_rsa
   sudo: True
-c4-1:
+F00070100:
   host: 192.168.1.32
   user: root
   priv: /root/.ssh/id_rsa
   sudo: True
 c4-2:
   host: 192.168.1.4
+  user: root
+  priv: /root/.ssh/id_rsa
+  sudo: True
+c4-3:
+  host: 192.168.1.38
   user: root
   priv: /root/.ssh/id_rsa
   sudo: True

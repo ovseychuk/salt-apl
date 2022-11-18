@@ -9,7 +9,7 @@ base:
     - qemu-agent
     - utilities
     - docker
-  'c4-1':
+  'F00070100':
     - salt-minion
     - utilities
     - docker
