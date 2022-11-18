@@ -31,163 +31,163 @@ iptbl-pers:
     - group: root
     - mode: 644
 
-ncdu
+ncdu:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-mc
+mc:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-nano
+nano:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-wget
+wget:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-curl
+curl:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-htop
+htop:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-ca-certificates
+ca-certificates:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-gnupg
+gnupg:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-lsb-release
+lsb-release:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-git
+git:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-dnsutils
+dnsutils:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-iptables
+iptables:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-iptables-persistent
+iptables-persistent:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-openvpn
+openvpn:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-ser2net
+ser2net:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-telnet
+telnet:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-telnetd
+telnetd:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-traceroute
+traceroute:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-apache2
+apache2:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-gammu
+gammu:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-monit
+monit:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-motion
+motion:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-snmp
+snmp:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-psmisc
+psmisc:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-ifupdown
+ifupdown:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-lsof
+lsof:
   pkg:
     - installed
     - refresh: True
     - allow_updates: True
     - hold: False
-lshw
+lshw:
   pkg:
     - installed
     - refresh: True
@@ -204,7 +204,7 @@ postfix:
     - name: |
         DEBIAN_FRONTEND=noninteractive apt install postfix
 
-apl-system-software-4.0.6_arm64.deb
+apl-system-software-4.0.6_arm64.deb:
   cmd.run:
     - name: |
         dpkg -i /tmp/apl-system-software-4.0.6_arm64.deb
