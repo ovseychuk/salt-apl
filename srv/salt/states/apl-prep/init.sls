@@ -22,15 +22,6 @@ iptbl-pers:
     - user: root
     - group: root
     - mode: 644
-
-/tmp/apl-system-software-4.0.6_arm64.deb:
-  file:
-    - source: salt://apl-prep/apl-system-software-4.0.6_arm64.deb
-    - managed
-    - user: root
-    - group: root
-    - mode: 644
-
 ncdu:
   pkg:
     - installed
