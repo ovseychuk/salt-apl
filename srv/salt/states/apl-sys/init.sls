@@ -1,6 +1,6 @@
 /tmp/apl-system-software-4.0.6_arm64.deb:
   file:
-    - source: salt://apl-prep/apl-system-software-4.0.6_arm64.deb
+    - source: salt://apl-sys/apl-system-software-4.0.6_arm64.deb
     - managed
     - user: root
     - group: root
