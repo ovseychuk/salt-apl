@@ -1,9 +1,9 @@
 salt-minion:
     pkgrepo.managed:
       - humanname: SaltStack Latest Release Channel for Ubuntu $releasever
-      - name: deb https://repo.saltproject.io/salt/py3/ubuntu/20.04/amd64/latest focal main
+      - name: deb https://repo.saltproject.io/py3/ubuntu/20.04/arm64/3005 focal main
       - file: /etc/apt/sources.list.d/salt.list
-      - key_url: https://repo.saltproject.io/salt/py3/ubuntu/20.04/amd64/latest/salt-archive-keyring.gpg
+      - key_url: https://repo.saltproject.io/py3/ubuntu/20.04/arm64/3005/salt-archive-keyring.gpg
       - gpgcheck: True
       - enabled: True
       - require_in:

@@ -1,11 +1,13 @@
 base:
-  '{SN1}':
+  'F00070{N1}':
     - apl-prep
     - apl-sys
     - apl-minion
-    - docker
-  '{SN2}':
+  'F00070{N2}':
     - apl-prep
     - apl-sys
     - apl-minion
-    - docker
+  'F00070{N3}':
+    - apl-prep
+    - apl-sys
+    - apl-minion

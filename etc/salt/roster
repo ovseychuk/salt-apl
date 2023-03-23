@@ -1,15 +1,15 @@
-F00070110:
-  host: 192.168.100.2
+F00070{N1}:
+  host: 192.168.100.*
   user: root
   priv: /root/.ssh/id_rsa
   sudo: True
-F00070111:
-  host: 192.168.100.9
+F00070{N2}:
+  host: 192.168.100.*
   user: root
   priv: /root/.ssh/id_rsa
   sudo: True
-F00070112:
-  host: 192.168.100.12
+F00070{N3}:
+  host: 192.168.100.*
   user: root
   priv: /root/.ssh/id_rsa
   sudo: True
