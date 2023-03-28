@@ -28,6 +28,14 @@ ncdu:
     - refresh: True
     - allow_updates: True
     - hold: False
+
+iperf3:
+  pkg:
+    - installed
+    - refresh: True
+    - allow_updates: True
+    - hold: False
+
 mc:
   pkg:
     - installed
@@ -185,6 +193,18 @@ lshw:
     - allow_updates: True
     - hold: False
 
+python3-pip:
+  pkg:
+    - installed
+    - refresh: True
+    - allow_updates: True
+    - hold: False
+
+pip3-salt:
+  cmd.run:
+    - name: |
+        pip3 install salt
+
 balance_3.57-1build1_arm64.deb:
   cmd.run:
     - name: |
@@ -194,3 +214,8 @@ postfix:
   cmd.run:
     - name: |
         DEBIAN_FRONTEND=noninteractive apt install postfix
+
+pip3-salt:
+  cmd.run:
+    - name: |
+        pip3 install salt
