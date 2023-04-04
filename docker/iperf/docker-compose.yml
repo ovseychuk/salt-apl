@@ -1,0 +1,30 @@
+version: "3.8"
+
+volumes:
+
+  influxdb-data:
+    driver: local
+
+services:
+  influxdb:
+    container_name: influxdb-beapl
+    image: influxdb:alpine
+    ports:
+      - 8086:8086
+    volumes:
+      - influxdb-data:/var/lib/influxdb2
+      - influxdb-data:/etc/influxdb2
+#      - /etc/ssl/InfluxDB-iperf/fullchain.pem:/etc/ssl/fullchain.pem
+#      - /etc/ssl/InfluxDB-iperf/cert-key.pem:/etc/ssl/cert-key.pem
+#    command:
+#      - '--tls-cert=/etc/ssl/fullchain.pem'
+#      - '--tls-key=/etc/ssl/cert-key.pem'
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=cms
+      - DOCKER_INFLUXDB_INIT_PASSWORD=P@ssw0rd
+      - DOCKER_INFLUXDB_INIT_ORG=Business Ecosystems
+      - DOCKER_INFLUXDB_INIT_BUCKET=iperf
+      - DOCKER_INFLUXDB_INIT_RETENTION=1w
+    restart: unless-stopped
+

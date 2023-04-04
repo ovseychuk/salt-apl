@@ -1,0 +1,12 @@
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/bookmarks
+
+- Business Ecosystems(c):
+    - Website:
+        - icon: buddy.png
+          href: https://www.becsys.ru/
+
+- BE Support:
+    - support@becsys.ru:
+        - icon: gmail.png
+          href: mailto:support@becsys.ru

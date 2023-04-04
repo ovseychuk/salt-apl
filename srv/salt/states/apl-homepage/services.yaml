@@ -1,0 +1,65 @@
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+- BE APL Services:
+
+    - iPerf Database Service:
+        icon: influxdb.png
+        href: http://192.168.100.*:8086/
+        description: GLPI Server
+        ping: http://192.168.100.*:8086/
+        server: beapl # The docker server that was configured
+        container: influxdb-beapl # The name of the container you'd like to connect
+    - F00070105 Web-SSH Access:
+        icon: shell.png
+        href: https://192.168.100.*:7105/
+        description: Shellinabox Service
+        ping: https://192.168.100.*:7105/
+
+- External Services:
+
+    - Monitoring Service:
+        icon: zabbix.png
+        href: http://192.168.100.122:8000/
+        description: Zabbix Server
+        ping: http://192.168.100.122:8000/
+
+    - Network Test Service:
+        icon: librespeed.png
+        href: http://192.168.100.123:3000/
+        description: iPerf Service Dashboards
+        ping: http://192.168.100.123:3000/
+
+- BE APL Docker Management:
+
+    - F00070*.dynright.lab:
+        icon: portainer.png
+        href: https://192.168.100.*:9443/
+        description: Portainer CE
+        ping: https://192.168.100.*:9443/
+        widget:
+          type: portainer
+          url: https://192.168.100.*:9443
+          env: 2
+          key: ptr_TW8D+/Agg53HoDNVBHzSQS5C42E+Tq5rGZX2H8ENwxM=
+        server: beapl # The docker server that was configured
+        container: apl-portainer # The name of the container you'd like to connect
+
+    - dproxy-beapl:
+        icon: docker.png
+        description: Docker Proxy Service
+        server: beapl # The docker server that was configured
+        container: dproxy-beapl # The name of the container you'd like to connect
+
+- Zabbix Stack Containers:
+
+    - zbxproxy:
+        icon: docker.png
+        description: Zabbix Proxy
+        server: beapl # The docker server that was configured
+        container: zbxproxy-F00070* # The name of the container you'd like to connect
+    - zbxagent:
+        icon: docker.png
+        description: Zabbix Agent
+        server: beapl # The docker server that was configured
+        container: zbxagent-F00070* # The name of the container you'd like to connect

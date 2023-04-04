@@ -1,0 +1,59 @@
+version: "3.8"
+
+volumes:
+
+  zproxy-data:
+    driver: local
+
+version: "3.8"
+
+volumes:
+
+  zproxy-data:
+    driver: local
+
+services:
+    proxy:
+        image: zabbix/zabbix-proxy-sqlite3:alpine-latest
+        container_name: zbxproxy-F00070*
+        ports:
+            - 10051:10051
+        volumes:
+            - zproxy-data:/usr/lib/zabbix/externalscripts:ro
+            - zproxy-data:/var/lib/zabbix/modules:ro
+            - zproxy-data:/var/lib/zabbix/enc:ro
+            - zproxy-data:/var/lib/zabbix/ssh_keys:ro
+            - zproxy-data:/var/lib/zabbix/ssl/certs:ro
+            - zproxy-data:/var/lib/zabbix/ssl/keys:ro
+            - zproxy-data:/var/lib/zabbix/ssl/ssl_ca:ro
+            - zproxy-data:/var/lib/zabbix/snmptraps:ro
+            - zproxy-data:/var/lib/zabbix/mibs:ro
+        restart: always
+        environment:
+            - ZBX_HOSTNAME=F00070*
+            - ZBX_SERVER_HOST=192.168.100.122
+            - ZBX_SERVER_PORT=10051
+            - ZBX_DEBUGLEVEL=1
+            - ZBX_PROXYMODE=1 # 0 - active proxy and 1 - passive proxy.
+            - ZBX_CONFIGFREQUENCY=3600
+    agent:
+        image: zabbix/zabbix-agent:alpine-latest
+        container_name: zbxagent-F00070*
+        ports:
+            - "10050:10050"
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+            - /proc:/proc
+            - /sys:/sys
+            - /dev:/dev
+            - /var/run/docker.sock:/var/run/docker.sock
+        privileged: true
+        pid: "host"
+        restart: always
+        depends_on:
+            - proxy
+        environment:
+            - ZBX_HOSTNAME=F00070*
+            - ZBX_SERVER_HOST=proxy
+            - ZBX_DEBUGLEVEL=1

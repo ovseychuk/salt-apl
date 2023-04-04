@@ -1,0 +1,20 @@
+title: F00070* Dashboard
+backgroundOpacity: 0.5
+headerStyle: boxed
+layout:
+  BE APL Services:
+    style: row
+    columns: 2
+    icon: strapi.png
+  External Services:
+    style: row
+    columns: 2
+    icon: assetgrid.png
+  BE APL Docker Management:
+    style: row
+    columns: 2
+    icon: portainer.png
+  Zabbix Stack Containers:
+    style: row
+    columns: 2
+    icon: zabbix.png
