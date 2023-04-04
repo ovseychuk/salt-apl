@@ -1,6 +1,6 @@
 /etc/openvpn/ca.crt:
   file:
-    - source: salt://apl-ca/ca.crt
+    - source: salt://apl-ca-cloud/ca.crt
     - managed
     - user: root
     - group: root
