@@ -22,8 +22,6 @@ telegraf:
     - refresh: True
     - allow_updates: True
     - hold: False
-
-telegraf:
   service:
     - running
     - enable: True

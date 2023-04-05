@@ -10,6 +10,9 @@ shellinabox:
     - refresh: True
     - allow_updates: True
     - hold: False
+  service:
+    - running
+    - enable: True
 
 /etc/default/shellinabox:
   file:
@@ -19,12 +22,7 @@ shellinabox:
     - group: root
     - mode: 644
 
-shellinabox-setup:
+shbox-restart:
   cmd.run:
     - name: |
         systemctl restart shellinabox
-
-shellinabox:
-  service:
-    - running
-    - enable: True

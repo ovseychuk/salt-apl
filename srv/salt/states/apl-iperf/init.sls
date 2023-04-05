@@ -3,6 +3,7 @@ upgrade:
     - name: |
         apt update
         apt upgrade -y
+        mkdir -p /etc/iperf3/
 
 
 /etc/iperf3/iperf3-udp.sh:
@@ -45,7 +46,7 @@ iperf3-setup:
     - group: root
     - mode: 644
 
-/etc/systemd/system/telegraf.service
+/etc/systemd/system/telegraf.service:
   file:
     - source: salt://apl-iperf/telegraf.service
     - managed

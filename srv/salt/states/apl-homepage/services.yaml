@@ -6,15 +6,15 @@
     - iPerf Database Service:
         icon: influxdb.png
         href: http://192.168.100.*:8086/
-        description: GLPI Server
+        description: InfluxDB
         ping: http://192.168.100.*:8086/
         server: beapl # The docker server that was configured
         container: influxdb-beapl # The name of the container you'd like to connect
     - F00070105 Web-SSH Access:
         icon: shell.png
-        href: https://192.168.100.*:7105/
+        href: https://192.168.100.*:71*/
         description: Shellinabox Service
-        ping: https://192.168.100.*:7105/
+        ping: https://192.168.100.*:71*/
 
 - External Services:
 
@@ -41,7 +41,7 @@
           type: portainer
           url: https://192.168.100.*:9443
           env: 2
-          key: ptr_TW8D+/Agg53HoDNVBHzSQS5C42E+Tq5rGZX2H8ENwxM=
+          key: *
         server: beapl # The docker server that was configured
         container: apl-portainer # The name of the container you'd like to connect
 

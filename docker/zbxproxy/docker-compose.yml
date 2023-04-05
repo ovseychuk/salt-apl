@@ -5,13 +5,6 @@ volumes:
   zproxy-data:
     driver: local
 
-version: "3.8"
-
-volumes:
-
-  zproxy-data:
-    driver: local
-
 services:
     proxy:
         image: zabbix/zabbix-proxy-sqlite3:alpine-latest

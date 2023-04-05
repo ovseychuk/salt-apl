@@ -2,7 +2,7 @@
 SHELLINABOX_DAEMON_START=1
 
 # TCP port that shellinboxd's webserver listens on
-SHELLINABOX_PORT=7105
+SHELLINABOX_PORT=*
 
 # Parameters that are managed by the system and usually should not need
 # changing:
