@@ -24,7 +24,7 @@ services:
         restart: always
         environment:
             - ZBX_HOSTNAME=F00070*
-            - ZBX_SERVER_HOST=192.168.100.122
+            - ZBX_SERVER_HOST=192.168.100.*
             - ZBX_SERVER_PORT=10051
             - ZBX_DEBUGLEVEL=1
             - ZBX_PROXYMODE=1 # 0 - active proxy and 1 - passive proxy.
