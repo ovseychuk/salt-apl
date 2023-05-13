@@ -1,0 +1,12 @@
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/bookmarks
+
+- SDS Fusion(c):
+    - Website:
+        - icon: buddy.png
+          href: https://www.sdsfusion.ru/
+
+- SDS Support:
+    - support@sdsfusion.ru:
+        - icon: gmail.png
+          href: mailto:support@sdsfusion.ru

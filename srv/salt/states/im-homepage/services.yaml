@@ -1,0 +1,57 @@
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+- IM001 Services:
+        - IM001 Web-SSH Access:
+                icon: shell.png
+                href: https://192.168.100.19:7100/
+                description: Shellinabox Service
+                ping: https://192.168.100.19:7100/
+
+- External Services:
+
+        - Monitoring Service:
+                icon: zabbix.png
+                href: http://192.168.100.122:8000/
+                description: Zabbix Server
+                ping: http://192.168.100.122:8000/
+
+        - Network Test Service:
+                icon: librespeed.png
+                href: http://192.168.100.123:3000/
+                description: iPerf Service Dashboards
+                ping: http://192.168.100.123:3000/
+
+- IM001 Docker Management:
+
+        - IM001.dynright.lab:
+               icon: portainer.png
+               href: https://192.168.100.19:9443/
+               description: Portainer CE
+               ping: https://192.168.100.19:9443/
+               widget:
+                  type: portainer
+                  url: https://192.168.100.19:9443
+                  env: 2
+                  key: ptr_g7R1+p4Jn6HBFiYydJTvXAlkifdgCbtFKZEFLPDSUBU=
+               server: im001 # The docker server that was configured
+               container: im-portainer # The name of the container you'd like to connect
+
+        - dproxy-im001:
+               icon: docker.png
+               description: Docker Proxy Service
+               server: im001 # The docker server that was configured
+               container: dproxy-im001 # The name of the container you'd like to connect
+
+- Zabbix Stack Containers:
+
+        - zbxproxy:
+               icon: docker.png
+               description: Zabbix Proxy
+               server: im001 # The docker server that was configured
+               container: zbxproxy-im001 # The name of the container you'd like to connect
+        - zbxagent:
+               icon: docker.png
+               description: Zabbix Agent
+               server: im001 # The docker server that was configured
+               container: zbxagent-im001 # The name of the container you'd like to connect

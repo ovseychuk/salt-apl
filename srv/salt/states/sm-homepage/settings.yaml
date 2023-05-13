@@ -1,0 +1,20 @@
+title: SM001 Dashboard
+backgroundOpacity: 0.5
+headerStyle: boxed
+layout:
+  SM001 Services:
+    style: row
+    columns: 2
+    icon: strapi.png
+  External Services:
+    style: row
+    columns: 2
+    icon: assetgrid.png
+  SM001 Docker Management:
+    style: row
+    columns: 2
+    icon: portainer.png
+  Zabbix Stack Containers:
+    style: row
+    columns: 2
+    icon: zabbix.png

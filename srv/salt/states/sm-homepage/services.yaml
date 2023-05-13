@@ -1,0 +1,64 @@
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+- SM001 Services:
+        - iPerf Database Service:
+                icon: influxdb.png
+                href: http://192.168.100.18:8086/
+                description: InfluxDB
+                ping: http://192.168.100.18:8086/
+                server: sm001 # The docker server that was configured
+                container: influxdb-sm001 # The name of the container you'd like to connect
+        - SM001 Web-SSH Access:
+                icon: shell.png
+                href: https://192.168.100.18:7100/
+                description: Shellinabox Service
+                ping: https://192.168.100.18:7100/
+
+- External Services:
+
+        - Monitoring Service:
+                icon: zabbix.png
+                href: http://192.168.100.122:8000/
+                description: Zabbix Server
+                ping: http://192.168.100.122:8000/
+
+        - Network Test Service:
+                icon: librespeed.png
+                href: http://192.168.100.123:3000/
+                description: iPerf Service Dashboards
+                ping: http://192.168.100.123:3000/
+
+- SM001 Docker Management:
+
+        - SM001.dynright.lab:
+               icon: portainer.png
+               href: https://192.168.100.18:9443/
+               description: Portainer CE
+               ping: https://192.168.100.18:9443/
+               widget:
+                  type: portainer
+                  url: https://192.168.100.18:9443
+                  env: 2
+                  key: ptr_DxMhI/4nTJMs/Smd77ixrgVcPeNTzmQ6U0Y81/3P3RM=
+               server: sm001 # The docker server that was configured
+               container: sm-portainer # The name of the container you'd like to connect
+
+        - dproxy-sm001:
+               icon: docker.png
+               description: Docker Proxy Service
+               server: sm001 # The docker server that was configured
+               container: dproxy-sm001 # The name of the container you'd like to connect
+
+- Zabbix Stack Containers:
+
+        - zbxproxy:
+               icon: docker.png
+               description: Zabbix Proxy
+               server: sm001 # The docker server that was configured
+               container: zbxproxy-sm001 # The name of the container you'd like to connect
+        - zbxagent:
+               icon: docker.png
+               description: Zabbix Agent
+               server: sm001 # The docker server that was configured
+               container: zbxagent-sm001 # The name of the container you'd like to connect
